@@ -7,7 +7,13 @@
     <title>Document</title>
 </head>
 <body class="container mt-5">
-    <div class="alert alert-info display-1 text-center">Sistema Administrador</div>
-    <a href="/proyectos/" class="btn btn-info">Proyectos</a>
+    <div class="alert alert-info display-1 text-center">Listado de Proyectos</div>
+    <form method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" value="Agregar Proyecto" class="btn btn-info">
+    </form>
+    
+    <a href="../proyectos" class="btn btn-info mt-5">Proyectos</a>
 </body>
 </html>
